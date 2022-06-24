@@ -4,8 +4,7 @@ metadata:
   name: demo
 spec:
   selector:
-    matchLabels:
-      app: demo-svc
+    app: demo-svc
   type: ClusterIP
   ports:
   - port: 80
