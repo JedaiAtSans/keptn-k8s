@@ -1,0 +1,15 @@
+apiVersion: k3d.io/v1alpha3
+kind: Simple
+name: mykeptn
+image: rancher/k3s:v1.21.12-k3s1-arm64
+servers: 3
+kubeAPI:
+  hostIP: "127.0.0.1"
+  hostPort: "6445"
+ports:
+  - port: 8080:80
+    nodeFilters:
+      - loadbalancer
+options:
+  k3d:
+    disableLoadbalancer: false
