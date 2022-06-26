@@ -3,12 +3,13 @@ kind: Service
 metadata:
   name: demo
 spec:
-  selector:
-    app: demo-svc
+
   type: ClusterIP
   ports:
   - port: 80
     targetPort: 8080
     protocol: TCP
     name: http
+  selector:
+    app: demo-svc
 
